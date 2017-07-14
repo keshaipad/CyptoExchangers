@@ -8,6 +8,7 @@
 
 import Cocoa
 import Alamofire
+import Kanna
 
 class ViewController: NSViewController, NSURLConnectionDelegate {
     
