@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		456E6E801F190B880055CABD /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456E6E7C1F190A430055CABD /* Kanna.framework */; };
-		456E6E811F190B880055CABD /* Kanna.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 456E6E7C1F190A430055CABD /* Kanna.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		52146DAD1F19301000DDAB92 /* Regex.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52146DAB1F192FAD00DDAB92 /* Regex.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		52146DAE1F1933B100DDAB92 /* Regex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52146DAB1F192FAD00DDAB92 /* Regex.framework */; };
+		52146DB41F1934B500DDAB92 /* Fuzi.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52146DB11F1934B500DDAB92 /* Fuzi.framework.dSYM */; };
+		52146DB51F1934B500DDAB92 /* Kanna.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52146DB21F1934B500DDAB92 /* Kanna.framework.dSYM */; };
+		52146DB61F1934B500DDAB92 /* Regex.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52146DB31F1934B500DDAB92 /* Regex.framework.dSYM */; };
+		521EA4691F19133B009A9580 /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521EA4681F19133B009A9580 /* Kanna.framework */; };
+		521EA46A1F191598009A9580 /* Kanna.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 521EA4681F19133B009A9580 /* Kanna.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		52DA05641F1866CF00920567 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA05631F1866CF00920567 /* AppDelegate.swift */; };
 		52DA05661F1866CF00920567 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA05651F1866CF00920567 /* ViewController.swift */; };
 		52DA05691F1866CF00920567 /* CryptoExchangers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52DA05671F1866CF00920567 /* CryptoExchangers.xcdatamodeld */; };
@@ -42,15 +47,32 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				456E6E811F190B880055CABD /* Kanna.framework in Embed Frameworks */,
+				52146DAD1F19301000DDAB92 /* Regex.framework in Embed Frameworks */,
+				521EA46A1F191598009A9580 /* Kanna.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52146DAF1F19343C00DDAB92 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				52146DB41F1934B500DDAB92 /* Fuzi.framework.dSYM in CopyFiles */,
+				52146DB51F1934B500DDAB92 /* Kanna.framework.dSYM in CopyFiles */,
+				52146DB61F1934B500DDAB92 /* Regex.framework.dSYM in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		456E6E7C1F190A430055CABD /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kanna.framework; sourceTree = "<group>"; };
+		52146DAB1F192FAD00DDAB92 /* Regex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Regex.framework; path = Carthage/Build/Mac/Regex.framework; sourceTree = "<group>"; };
+		52146DB11F1934B500DDAB92 /* Fuzi.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Fuzi.framework.dSYM; path = Carthage/Build/Mac/Fuzi.framework.dSYM; sourceTree = "<group>"; };
+		52146DB21F1934B500DDAB92 /* Kanna.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Kanna.framework.dSYM; path = Carthage/Build/Mac/Kanna.framework.dSYM; sourceTree = "<group>"; };
+		52146DB31F1934B500DDAB92 /* Regex.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Regex.framework.dSYM; path = Carthage/Build/Mac/Regex.framework.dSYM; sourceTree = "<group>"; };
+		521EA4681F19133B009A9580 /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/Mac/Kanna.framework; sourceTree = "<group>"; };
 		52DA05601F1866CF00920567 /* CryptoExchangers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoExchangers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DA05631F1866CF00920567 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52DA05651F1866CF00920567 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,7 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				456E6E801F190B880055CABD /* Kanna.framework in Frameworks */,
+				52146DAE1F1933B100DDAB92 /* Regex.framework in Frameworks */,
+				521EA4691F19133B009A9580 /* Kanna.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +118,8 @@
 		521EA4401F189D2A009A9580 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				456E6E7C1F190A430055CABD /* Kanna.framework */,
+				52146DAB1F192FAD00DDAB92 /* Regex.framework */,
+				521EA4681F19133B009A9580 /* Kanna.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -103,6 +127,9 @@
 		52DA05571F1866CA00920567 = {
 			isa = PBXGroup;
 			children = (
+				52146DB11F1934B500DDAB92 /* Fuzi.framework.dSYM */,
+				52146DB21F1934B500DDAB92 /* Kanna.framework.dSYM */,
+				52146DB31F1934B500DDAB92 /* Regex.framework.dSYM */,
 				52DA05621F1866CF00920567 /* CryptoExchangers */,
 				52DA05771F1866D000920567 /* CryptoExchangersTests */,
 				52DA05821F1866D100920567 /* CryptoExchangersUITests */,
@@ -163,6 +190,7 @@
 				52DA055D1F1866CA00920567 /* Frameworks */,
 				52DA055E1F1866CA00920567 /* Resources */,
 				456E6E821F190B890055CABD /* Embed Frameworks */,
+				52146DAF1F19343C00DDAB92 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -440,6 +468,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = CryptoExchangers/Info.plist;
@@ -462,6 +491,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = CryptoExchangers/Info.plist;
