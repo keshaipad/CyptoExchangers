@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52DA05641F1866CF00920567 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA05631F1866CF00920567 /* AppDelegate.swift */; };
+		52DA05661F1866CF00920567 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA05651F1866CF00920567 /* ViewController.swift */; };
+		52DA05691F1866CF00920567 /* CryptoExchangers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52DA05671F1866CF00920567 /* CryptoExchangers.xcdatamodeld */; };
+		52DA056B1F1866CF00920567 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DA056A1F1866CF00920567 /* Assets.xcassets */; };
+		52DA056E1F1866D000920567 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DA056C1F1866D000920567 /* Main.storyboard */; };
+		52DA05791F1866D000920567 /* CryptoExchangersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA05781F1866D000920567 /* CryptoExchangersTests.swift */; };
+		52DA05841F1866D100920567 /* CryptoExchangersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA05831F1866D100920567 /* CryptoExchangersUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52DA05751F1866D000920567 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52DA05581F1866CA00920567 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52DA055F1F1866CA00920567;
+			remoteInfo = CryptoExchangers;
+		};
+		52DA05801F1866D100920567 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52DA05581F1866CA00920567 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52DA055F1F1866CA00920567;
+			remoteInfo = CryptoExchangers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		52DA05601F1866CF00920567 /* CryptoExchangers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoExchangers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52DA05631F1866CF00920567 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		52DA05651F1866CF00920567 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52DA05681F1866CF00920567 /* CryptoExchangers.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CryptoExchangers.xcdatamodel; sourceTree = "<group>"; };
+		52DA056A1F1866CF00920567 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52DA056D1F1866D000920567 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52DA056F1F1866D000920567 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52DA05741F1866D000920567 /* CryptoExchangersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoExchangersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52DA05781F1866D000920567 /* CryptoExchangersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoExchangersTests.swift; sourceTree = "<group>"; };
+		52DA057A1F1866D100920567 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52DA057F1F1866D100920567 /* CryptoExchangersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoExchangersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52DA05831F1866D100920567 /* CryptoExchangersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoExchangersUITests.swift; sourceTree = "<group>"; };
+		52DA05851F1866D100920567 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52DA055D1F1866CA00920567 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52DA05711F1866D000920567 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52DA057C1F1866D100920567 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52DA05571F1866CA00920567 = {
+			isa = PBXGroup;
+			children = (
+				52DA05621F1866CF00920567 /* CryptoExchangers */,
+				52DA05771F1866D000920567 /* CryptoExchangersTests */,
+				52DA05821F1866D100920567 /* CryptoExchangersUITests */,
+				52DA05611F1866CF00920567 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52DA05611F1866CF00920567 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52DA05601F1866CF00920567 /* CryptoExchangers.app */,
+				52DA05741F1866D000920567 /* CryptoExchangersTests.xctest */,
+				52DA057F1F1866D100920567 /* CryptoExchangersUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52DA05621F1866CF00920567 /* CryptoExchangers */ = {
+			isa = PBXGroup;
+			children = (
+				52DA05631F1866CF00920567 /* AppDelegate.swift */,
+				52DA05651F1866CF00920567 /* ViewController.swift */,
+				52DA056A1F1866CF00920567 /* Assets.xcassets */,
+				52DA056C1F1866D000920567 /* Main.storyboard */,
+				52DA056F1F1866D000920567 /* Info.plist */,
+				52DA05671F1866CF00920567 /* CryptoExchangers.xcdatamodeld */,
+			);
+			path = CryptoExchangers;
+			sourceTree = "<group>";
+		};
+		52DA05771F1866D000920567 /* CryptoExchangersTests */ = {
+			isa = PBXGroup;
+			children = (
+				52DA05781F1866D000920567 /* CryptoExchangersTests.swift */,
+				52DA057A1F1866D100920567 /* Info.plist */,
+			);
+			path = CryptoExchangersTests;
+			sourceTree = "<group>";
+		};
+		52DA05821F1866D100920567 /* CryptoExchangersUITests */ = {
+			isa = PBXGroup;
+			children = (
+				52DA05831F1866D100920567 /* CryptoExchangersUITests.swift */,
+				52DA05851F1866D100920567 /* Info.plist */,
+			);
+			path = CryptoExchangersUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52DA055F1F1866CA00920567 /* CryptoExchangers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52DA05881F1866D100920567 /* Build configuration list for PBXNativeTarget "CryptoExchangers" */;
+			buildPhases = (
+				52DA055C1F1866CA00920567 /* Sources */,
+				52DA055D1F1866CA00920567 /* Frameworks */,
+				52DA055E1F1866CA00920567 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CryptoExchangers;
+			productName = CryptoExchangers;
+			productReference = 52DA05601F1866CF00920567 /* CryptoExchangers.app */;
+			productType = "com.apple.product-type.application";
+		};
+		52DA05731F1866D000920567 /* CryptoExchangersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52DA058B1F1866D100920567 /* Build configuration list for PBXNativeTarget "CryptoExchangersTests" */;
+			buildPhases = (
+				52DA05701F1866D000920567 /* Sources */,
+				52DA05711F1866D000920567 /* Frameworks */,
+				52DA05721F1866D000920567 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52DA05761F1866D000920567 /* PBXTargetDependency */,
+			);
+			name = CryptoExchangersTests;
+			productName = CryptoExchangersTests;
+			productReference = 52DA05741F1866D000920567 /* CryptoExchangersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		52DA057E1F1866D100920567 /* CryptoExchangersUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52DA058E1F1866D100920567 /* Build configuration list for PBXNativeTarget "CryptoExchangersUITests" */;
+			buildPhases = (
+				52DA057B1F1866D100920567 /* Sources */,
+				52DA057C1F1866D100920567 /* Frameworks */,
+				52DA057D1F1866D100920567 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52DA05811F1866D100920567 /* PBXTargetDependency */,
+			);
+			name = CryptoExchangersUITests;
+			productName = CryptoExchangersUITests;
+			productReference = 52DA057F1F1866D100920567 /* CryptoExchangersUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52DA05581F1866CA00920567 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Qottie;
+				TargetAttributes = {
+					52DA055F1F1866CA00920567 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					52DA05731F1866D000920567 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 52DA055F1F1866CA00920567;
+					};
+					52DA057E1F1866D100920567 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 52DA055F1F1866CA00920567;
+					};
+				};
+			};
+			buildConfigurationList = 52DA055B1F1866CA00920567 /* Build configuration list for PBXProject "CryptoExchangers" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52DA05571F1866CA00920567;
+			productRefGroup = 52DA05611F1866CF00920567 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52DA055F1F1866CA00920567 /* CryptoExchangers */,
+				52DA05731F1866D000920567 /* CryptoExchangersTests */,
+				52DA057E1F1866D100920567 /* CryptoExchangersUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52DA055E1F1866CA00920567 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52DA056B1F1866CF00920567 /* Assets.xcassets in Resources */,
+				52DA056E1F1866D000920567 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52DA05721F1866D000920567 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52DA057D1F1866D100920567 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52DA055C1F1866CA00920567 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52DA05661F1866CF00920567 /* ViewController.swift in Sources */,
+				52DA05641F1866CF00920567 /* AppDelegate.swift in Sources */,
+				52DA05691F1866CF00920567 /* CryptoExchangers.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52DA05701F1866D000920567 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52DA05791F1866D000920567 /* CryptoExchangersTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52DA057B1F1866D100920567 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52DA05841F1866D100920567 /* CryptoExchangersUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52DA05761F1866D000920567 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52DA055F1F1866CA00920567 /* CryptoExchangers */;
+			targetProxy = 52DA05751F1866D000920567 /* PBXContainerItemProxy */;
+		};
+		52DA05811F1866D100920567 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52DA055F1F1866CA00920567 /* CryptoExchangers */;
+			targetProxy = 52DA05801F1866D100920567 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		52DA056C1F1866D000920567 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52DA056D1F1866D000920567 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52DA05861F1866D100920567 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		52DA05871F1866D100920567 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		52DA05891F1866D100920567 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CryptoExchangers/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Qottie.CryptoExchangers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		52DA058A1F1866D100920567 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CryptoExchangers/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Qottie.CryptoExchangers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		52DA058C1F1866D100920567 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CryptoExchangersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Qottie.CryptoExchangersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoExchangers.app/Contents/MacOS/CryptoExchangers";
+			};
+			name = Debug;
+		};
+		52DA058D1F1866D100920567 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CryptoExchangersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Qottie.CryptoExchangersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoExchangers.app/Contents/MacOS/CryptoExchangers";
+			};
+			name = Release;
+		};
+		52DA058F1F1866D100920567 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CryptoExchangersUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Qottie.CryptoExchangersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = CryptoExchangers;
+			};
+			name = Debug;
+		};
+		52DA05901F1866D100920567 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CryptoExchangersUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Qottie.CryptoExchangersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = CryptoExchangers;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52DA055B1F1866CA00920567 /* Build configuration list for PBXProject "CryptoExchangers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52DA05861F1866D100920567 /* Debug */,
+				52DA05871F1866D100920567 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52DA05881F1866D100920567 /* Build configuration list for PBXNativeTarget "CryptoExchangers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52DA05891F1866D100920567 /* Debug */,
+				52DA058A1F1866D100920567 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		52DA058B1F1866D100920567 /* Build configuration list for PBXNativeTarget "CryptoExchangersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52DA058C1F1866D100920567 /* Debug */,
+				52DA058D1F1866D100920567 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		52DA058E1F1866D100920567 /* Build configuration list for PBXNativeTarget "CryptoExchangersUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52DA058F1F1866D100920567 /* Debug */,
+				52DA05901F1866D100920567 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		52DA05671F1866CF00920567 /* CryptoExchangers.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				52DA05681F1866CF00920567 /* CryptoExchangers.xcdatamodel */,
+			);
+			currentVersion = 52DA05681F1866CF00920567 /* CryptoExchangers.xcdatamodel */;
+			path = CryptoExchangers.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 52DA05581F1866CA00920567 /* Project object */;
+}
