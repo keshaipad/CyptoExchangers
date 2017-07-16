@@ -786,13 +786,13 @@
                                 </textFieldCell>
                             </textField>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cw-Ge-v9j">
-                                <rect key="frame" x="0.0" y="66" width="715" height="135"/>
+                                <rect key="frame" x="0.0" y="0.0" width="715" height="201"/>
                                 <clipView key="contentView" id="UUf-F4-eCG">
-                                    <rect key="frame" x="1" y="0.0" width="713" height="134"/>
+                                    <rect key="frame" x="1" y="0.0" width="713" height="200"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="1Jb-xX-DtY" viewBased="YES" id="g77-IR-FAx">
-                                            <rect key="frame" x="0.0" y="0.0" width="713" height="111"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="713" height="177"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -835,6 +835,7 @@
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
+                                                    <sortDescriptor key="sortDescriptorPrototype" selector="compare:" sortKey="Dollar"/>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                 </tableColumn>
                                             </tableColumns>
@@ -873,7 +874,7 @@
                             <constraint firstAttribute="trailing" secondItem="7cw-Ge-v9j" secondAttribute="trailing" id="7Oh-8L-XjQ"/>
                             <constraint firstItem="KRk-Yv-S6a" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="57" id="8j5-Vg-CHd"/>
                             <constraint firstAttribute="trailing" secondItem="jxo-mG-n1D" secondAttribute="trailing" id="DW9-2c-WWu"/>
-                            <constraint firstAttribute="bottom" secondItem="7cw-Ge-v9j" secondAttribute="bottom" constant="66" id="F23-Xz-QND"/>
+                            <constraint firstAttribute="bottom" secondItem="7cw-Ge-v9j" secondAttribute="bottom" id="Hsl-5I-e7n"/>
                             <constraint firstItem="jxo-mG-n1D" firstAttribute="leading" secondItem="woF-3H-6ts" secondAttribute="trailing" constant="8" id="JFn-gh-xa1"/>
                             <constraint firstItem="jxo-mG-n1D" firstAttribute="bottom" secondItem="woF-3H-6ts" secondAttribute="bottom" id="Jnn-Qn-Jyv"/>
                             <constraint firstAttribute="bottom" secondItem="jxo-mG-n1D" secondAttribute="bottom" constant="237" id="MKv-yG-MfV"/>

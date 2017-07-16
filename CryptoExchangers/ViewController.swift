@@ -13,15 +13,36 @@ import Regex
 
 class ViewController: NSViewController, NSURLConnectionDelegate {
 
-    let exchangers = ["GatehubBTC","QuadrigaCXBTC.USD","GeminiBTC","BTC.XBTC.USD","LivecoinBTC.USD","OkCoin.Intl","YoBitBTC.USD"]
-    let feeExchangers = [["Symbol":"GatehubBTC","Ask":["Wire":"15","type":"$"],"Bid":["Wire":"15","type":"$"]],["Symbol":"QuadrigaCXBTC.USD","Ask":["Wire":"0","CryptoCapital":"0","type":"%","Wire2":"5"],"Bid":["Wire":"0","CryptoCapital":"0","type":"%"]]]
+    let exchangers = ["GatehubBTC","QuadrigaCXBTC.USD","GeminiBTC","BTC.XBTC.USD","LivecoinBTC.USD","OkCoin.Intl","YoBitBTC.USD","Exmo"]
+    /* switch symbol {
+    case "coinbaseUSD":
+    curDic.append([tsymbol:cur, tbid:bid, task:ask])
+    case "hitbtcUSD":
+    curDic.append([tsymbol:cur, tbid:bid, task:ask])
+    case "btceUSD":
+    curDic.append([tsymbol:cur, tbid:bid, task:ask])
+    case "coinsbankUSD":
+    curDic.append([tsymbol:cur, tbid:bid, task:ask])
+    case "itbitUSD":
+    curDic.append([tsymbol:cur, tbid:bid, task:ask])
+    case "krakenUSD":
+    curDic.append([tsymbol:cur, tbid:bid, task:ask])
+    case "bitstampUSD":
+    curDic.append([tsymbol:cur, tbid:bid, task:ask])
+    case "cexUSD":
+    curDic.append([tsymbol:cur, tbid:bid, task:ask])
+    case "btccUSD":
+    curDic.append([tsymbol:cur, tbid:bid, task:ask])
+    default: break
+    }
+    */
     
-    let askssFee = [["Symbol":"GatehubBTC","$Wire":"15"],["Symbol":"BTC.XBTC.USD","$Wire":"0","$CryptoCapital":"0"]]
-    let bidsFee = [["Symbol":"GatehubBTC","$Wire":"15"],["Symbol":"BTC.XBTC.USD","$Wire":"0","$CryptoCapital":"0"]]
-    let additionalFee = [["Symbol":"GatehubBTC","$Wire":"10","Type":"ask"],["Symbol":"BTC.XBTC.USD","$Wire":"10","Type":"bid"]]
+    let askssFee = [["Symbol":"GatehubBTC","$Wire":"15"],["Symbol":"hitbtcUSD","%Swift":"1"],["Symbol":"coinsbankUSD","$Wire":"0","%Okpay":"0.5"],["Symbol":"coinbaseUSD","$Wire":"10"],["Symbol":"GeminiBTC","$Wire":"0"],["Symbol":"BTC.XBTC.USD","$Wire":"0","$CryptoCapital":"0"],["Symbol":"itbitUSD","$Swift":"40"],["Symbol":"btccUSD","$CryptoCapital":"0"],["Symbol":"krakenUSD","$Wire":"10"],["Symbol":"YoBitBTC.USD","$Capitalist":"0","$Okpay":"0","$PerfectMoney":"0"],["Symbol":"BTC-X","%Wire":"1","$Cash Kharckov":"0"],["Symbol":"LivecoinBTC.USD","%Perfectmoney":"1.5","$Wire":"50","%BTC-у USD":"2.5","$Capitalist":"0"],["Symbol":"bitstampUSD","$Wire":"10"],["Symbol":"OkCoin.Intl","%Wire":"0.1"],["Symbol":"Exmo","$Wire":"20","$Capitalist":"0","$CryptoCapital":"0","%AdvCash":"3","%Perfect Money":"3"],["Symbol":"cexUSD","$Wire":"0","$CryptoCapital":"0","%Visa":"3.5"]]
+    let bidsFee = [["Symbol":"GatehubBTC","$Wire":"15"],["Symbol":"hitbtcUSD","$Wire":"0","$CryptoCapital":"0"],["Symbol":"BTC.XBTC.USD","$Swift":"35"],["Symbol":"coinsbankUSD","%Wire":"1","%Okpay":"1.5"],["Symbol":"coinbaseUSD","$Wire":"25"],["Symbol":"GeminiBTC","$Wire":"0"],["Symbol":"BTC.XBTC.USD","$Wire":"0","$CryptoCapital":"0"],["Symbol":"itbitUSD","$Swift":"40"],["Symbol":"btccUSD","%CryptoCapital":"0.2"],["Symbol":"krakenUSD","$Wire":"10"],["Symbol":"YoBitBTC.USD","%PerfectMoney":"3","%Okpay":"3","%Capitalist":"5"],["Symbol":"BTC","$Wire":"0.5","$Cash Kharckov":"0"],["Symbol":"LivecoinBTC.USD","%Perfectmoney":"0.5","%Wire":"1.5","$Capitalist":"0"],["Symbol":"bitstampUSD","%Wire":"0.1"],["Symbol":"OkCoin.Intl","%Wire":"0.1"],["Symbol":"Exmo","$Wire":"20","$CryptoCapital":"0","$AdvCash":"0","%Perfect Money":"0.5","%Visa":"3"],["Symbol":"cexUSD","$Visa":"3.8","$Wire":"50","%CryptoCapital":"1"]]
+    
+    let additionalFee = [["Symbol":"LivecoinBTC.USD","%Wire":"9","Type":"bid"],["Symbol":"Exmo","%Visa":"7.5","Type":"bid"],["Symbol":"cexUSD","$Visa":"0.25","Type":"ask"]]
     
     var tableViewData = [["":""]]
-    var feeClass = [exchanersFees()]
     
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var resultsTableView: NSTableView!
@@ -41,29 +62,6 @@ class ViewController: NSViewController, NSURLConnectionDelegate {
     
     @IBAction func summDollar(_ sender: Any) {
         calculatingData()
-    }
-    
-    
-    func addFees() {
-        var feeses = exchanersFees()
-        feeses.symbol = "GatehubBTC"
-        feeses.ask1 = ["Wire","15","$"]
-        feeses.bid1 = ["Wire","15","$"]
-        feeClass.append(feeses)
-        feeses = exchanersFees()
-        feeses.symbol = "QuadrigaCXBTC.USD"
-        feeses.ask1 = ["Wire","0","$"]
-        feeses.ask2 = ["CryptoCapital","0","$"]
-        feeses.bid1 = ["Wire","0","$"]
-        feeses.bid2 = ["CryptoCapital","0","$"]
-        feeClass.append(feeses)
-        feeses = exchanersFees()
-        feeses.symbol = "hitbtcUSD"
-        feeses.ask1 = ["Swift","1","%"]
-        feeses.bid1 = ["Swift","2","%"]
-        feeClass.append(feeses)
-        feeses = exchanersFees()
-
     }
     
     func allFeeAndText(symbol:String, askOrNot: Bool, fromSumm: Double) -> [[String : AnyObject]] {
@@ -88,7 +86,7 @@ class ViewController: NSViewController, NSURLConnectionDelegate {
                             sumRes = fromSumm - Double(val)!
                             textRes = "\(keyText) -> \(fromSumm)-\(val)$=\(sumRes)"
                         } else {
-                            sumRes = Double(val)! * fromSumm / 100
+                            sumRes = fromSumm - (Double(val)! * fromSumm / 100)
                             textRes = "\(keyText) -> \(fromSumm)-\(val)%=\(sumRes)"
                         }
                         for eachFee in additionalFee {
@@ -110,14 +108,10 @@ class ViewController: NSViewController, NSURLConnectionDelegate {
         return result
     }
     
-    func checkForAdditionalFee(symbol:String) {
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        addFees()
-        _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateData), userInfo: nil, repeats: true)
+        //_ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateData), userInfo: nil, repeats: true)
+        
         
         self.tableView.delegate = self as? NSTableViewDelegate
         self.tableView.dataSource = self
@@ -162,30 +156,6 @@ class ViewController: NSViewController, NSURLConnectionDelegate {
                             }
                         
                     }
-                    
-                       /* if dataInProcent > -100 {
-                            
-                                for i in feeClass {
-                                    if i.symbol == me["Symbol"] as! String {
-                                        //print(i.ask1.first!," ", me["Symbol"] as! String, " -> ",we["Symbol"] as! String," ", dataInProcent,"%")
-                                        if i.ask1[2] == "$" {
-                                            let n = i.ask1[1]
-                                            balance -= Double(n)!
-                                            for ii in feeClass {
-                                                if ii.symbol == we["Symbol"] as! String {
-                                                    if i.bid1[2] == "$" {
-                                                        let nn = ii.bid1[1]
-                                                    }
-                                                }
-                                            }
-                                            print(i.ask1.first!,"-",i.ask1[1],i.ask1[2],"=",balance, me["Symbol"] as! String, " -> ",we["Symbol"] as! String," ", dataInProcent,"%")
-                                            balance = Double(summText.stringValue)!
-                                        } else {
-                                            
-                                        }
-                                    }
-                                }
-                        } */
                 }
             }
         }
@@ -193,45 +163,6 @@ class ViewController: NSViewController, NSURLConnectionDelegate {
     }
 
     
-    func calcComissions(symbol: String, askOrNot: Bool, summ: Double) -> Dictionary<String, Double> {
-        var result = [String():Double()]
-        var summFromText = Double(summText.stringValue)
-        if summ != 0 {summFromText = summ}
-        for fee in feeExchangers {
-            if fee["Symbol"] as! String == symbol {
-                var allFees = [String():String()]
-                
-                
-                    if askOrNot {
-                        allFees = fee["Ask"] as! Dictionary<String, String>
-                    } else {
-                        allFees = fee["Bid"] as! Dictionary<String, String>
-                    }
-                
-                if allFees["type"] == "$" {
-                    for eachfee in allFees {
-                        if eachfee.key != "type" {
-                            result[eachfee.key] = Double(eachfee.value)
-                        }
-                    }
-                } else {
-                    for eachfee in allFees {
-                        if eachfee.key != "type" {
-                            let procent = Double(eachfee.value)
-                            let res = summFromText! * procent! / 100
-                            result[eachfee.key] = res
-                        }
-                    }
-                }
-            }
-        }
-        return result
-    }
-    
-    func getDataFromClass() {
-        
-    }
-
     func getDataFromBitcoincharts() {
         curDic.removeAll()
         Alamofire.request("https://api.bitcoincharts.com/v1/markets.json").responseJSON { response in
@@ -277,8 +208,8 @@ class ViewController: NSViewController, NSURLConnectionDelegate {
             curDic.append([tsymbol:cur, tbid:bid, task:ask])
         case "cexUSD":
             curDic.append([tsymbol:cur, tbid:bid, task:ask])
-        case "btccUSD":
-            curDic.append([tsymbol:cur, tbid:bid, task:ask])
+        //case "btccUSD":
+            //curDic.append([tsymbol:cur, tbid:bid, task:ask])
         default: break
         }
     }
@@ -337,16 +268,14 @@ class ViewController: NSViewController, NSURLConnectionDelegate {
             count1.stringValue = "\(countInt)"
         } else {
             countInt = 20
+            getDataFromBitcoincharts()
+            self.scrapeNYCMetalScene()
             calculatingData()
-            //getDataFromBitcoincharts()
-            //self.scrapeNYCMetalScene()
         }
     }
     
     }
 
-
-    
     extension ViewController:NSTableViewDataSource{
         func numberOfRows(in tableView: NSTableView) -> Int {
             var result = 0
@@ -366,19 +295,7 @@ class ViewController: NSViewController, NSURLConnectionDelegate {
             }
              return nil
         }
+        func tableView(_ tableView: NSTableView, sortDescriptorsDidChange oldDescriptors: [NSSortDescriptor]) {
+            resultsTableView.reloadData()
+        }
     }
-
-class exchanersFees {
-    var symbol = ""
-    var ask1 = [String]()
-    var ask2 = [String]()
-    var ask3 = [String]()
-    var ask4 = [String]()
-    var ask5 = [String]()
-    var bid1 = [String]()
-    var bid2 = [String]()
-    var bid3 = [String]()
-    var bid4 = [String]()
-    var bid5 = [String]()
-    //var bid = ["Wire","15","%","Aldd","5"] будет значить 15% + 5$
-}
