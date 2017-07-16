@@ -13,32 +13,10 @@ import Regex
 
 class ViewController: NSViewController, NSURLConnectionDelegate {
 
-    let exchangers = ["GatehubBTC","QuadrigaCXBTC.USD","GeminiBTC","BTC.XBTC.USD","LivecoinBTC.USD","OkCoin.Intl","YoBitBTC.USD","Exmo"]
-    /* switch symbol {
-    case "coinbaseUSD":
-    curDic.append([tsymbol:cur, tbid:bid, task:ask])
-    case "hitbtcUSD":
-    curDic.append([tsymbol:cur, tbid:bid, task:ask])
-    case "btceUSD":
-    curDic.append([tsymbol:cur, tbid:bid, task:ask])
-    case "coinsbankUSD":
-    curDic.append([tsymbol:cur, tbid:bid, task:ask])
-    case "itbitUSD":
-    curDic.append([tsymbol:cur, tbid:bid, task:ask])
-    case "krakenUSD":
-    curDic.append([tsymbol:cur, tbid:bid, task:ask])
-    case "bitstampUSD":
-    curDic.append([tsymbol:cur, tbid:bid, task:ask])
-    case "cexUSD":
-    curDic.append([tsymbol:cur, tbid:bid, task:ask])
-    case "btccUSD":
-    curDic.append([tsymbol:cur, tbid:bid, task:ask])
-    default: break
-    }
-    */
+    let exchangers = ["GatehubBTC","QuadrigaCXBTC.USD","GeminiBTC","BTC.XBTC.USD","LivecoinBTC.USD","OkCoin.Intl","YoBitBTC.USD","Exmo","BX.Thailand"]
     
-    let askssFee = [["Symbol":"GatehubBTC","$Wire":"15"],["Symbol":"hitbtcUSD","%Swift":"1"],["Symbol":"coinsbankUSD","$Wire":"0","%Okpay":"0.5"],["Symbol":"coinbaseUSD","$Wire":"10"],["Symbol":"GeminiBTC","$Wire":"0"],["Symbol":"BTC.XBTC.USD","$Wire":"0","$CryptoCapital":"0"],["Symbol":"itbitUSD","$Swift":"40"],["Symbol":"btccUSD","$CryptoCapital":"0"],["Symbol":"krakenUSD","$Wire":"10"],["Symbol":"YoBitBTC.USD","$Capitalist":"0","$Okpay":"0","$PerfectMoney":"0"],["Symbol":"BTC-X","%Wire":"1","$Cash Kharckov":"0"],["Symbol":"LivecoinBTC.USD","%Perfectmoney":"1.5","$Wire":"50","%BTC-у USD":"2.5","$Capitalist":"0"],["Symbol":"bitstampUSD","$Wire":"10"],["Symbol":"OkCoin.Intl","%Wire":"0.1"],["Symbol":"Exmo","$Wire":"20","$Capitalist":"0","$CryptoCapital":"0","%AdvCash":"3","%Perfect Money":"3"],["Symbol":"cexUSD","$Wire":"0","$CryptoCapital":"0","%Visa":"3.5"]]
-    let bidsFee = [["Symbol":"GatehubBTC","$Wire":"15"],["Symbol":"hitbtcUSD","$Wire":"0","$CryptoCapital":"0"],["Symbol":"BTC.XBTC.USD","$Swift":"35"],["Symbol":"coinsbankUSD","%Wire":"1","%Okpay":"1.5"],["Symbol":"coinbaseUSD","$Wire":"25"],["Symbol":"GeminiBTC","$Wire":"0"],["Symbol":"BTC.XBTC.USD","$Wire":"0","$CryptoCapital":"0"],["Symbol":"itbitUSD","$Swift":"40"],["Symbol":"btccUSD","%CryptoCapital":"0.2"],["Symbol":"krakenUSD","$Wire":"10"],["Symbol":"YoBitBTC.USD","%PerfectMoney":"3","%Okpay":"3","%Capitalist":"5"],["Symbol":"BTC","$Wire":"0.5","$Cash Kharckov":"0"],["Symbol":"LivecoinBTC.USD","%Perfectmoney":"0.5","%Wire":"1.5","$Capitalist":"0"],["Symbol":"bitstampUSD","%Wire":"0.1"],["Symbol":"OkCoin.Intl","%Wire":"0.1"],["Symbol":"Exmo","$Wire":"20","$CryptoCapital":"0","$AdvCash":"0","%Perfect Money":"0.5","%Visa":"3"],["Symbol":"cexUSD","$Visa":"3.8","$Wire":"50","%CryptoCapital":"1"]]
+    let askssFee = [["Symbol":"GatehubBTC","$Wire":"15"],["Symbol":"hitbtcUSD","%Swift":"1"],["Symbol":"coinsbankUSD","$Wire":"0","%Okpay":"0.5"],["Symbol":"coinbaseUSD","$Wire":"10"],["Symbol":"GeminiBTC","$Wire":"0"],["Symbol":"BTC.XBTC.USD","$Wire":"0","$CryptoCapital":"0"],["Symbol":"itbitUSD","$Swift":"40"],["Symbol":"btccUSD","$CryptoCapital":"0"],["Symbol":"krakenUSD","$Wire":"10"],["Symbol":"YoBitBTC.USD","$Capitalist":"0","$Okpay":"0","$PerfectMoney":"0"],["Symbol":"BTC-X","%Wire":"1","$Cash Kharckov":"0"],["Symbol":"LivecoinBTC.USD","%Perfectmoney":"1.5","$Wire":"50","%BTC-у USD":"2.5","$Capitalist":"0"],["Symbol":"bitstampUSD","$Wire":"10"],["Symbol":"OkCoin.Intl","%Wire":"0.1"],["Symbol":"Exmo","$Wire":"20","$Capitalist":"0","$CryptoCapital":"0","%AdvCash":"3","%Perfect Money":"3"],["Symbol":"cexUSD","$Wire":"0","$CryptoCapital":"0","%Visa":"3.5"],["Symbol":"BX.Thailand","$CashBangkok":"0"]]
+    let bidsFee = [["Symbol":"GatehubBTC","$Wire":"15"],["Symbol":"hitbtcUSD","$Wire":"0","$CryptoCapital":"0"],["Symbol":"BTC.XBTC.USD","$Swift":"35"],["Symbol":"coinsbankUSD","%Wire":"1","%Okpay":"1.5"],["Symbol":"coinbaseUSD","$Wire":"25"],["Symbol":"GeminiBTC","$Wire":"0"],["Symbol":"BTC.XBTC.USD","$Wire":"0","$CryptoCapital":"0"],["Symbol":"itbitUSD","$Swift":"40"],["Symbol":"btccUSD","%CryptoCapital":"0.2"],["Symbol":"krakenUSD","$Wire":"10"],["Symbol":"YoBitBTC.USD","%PerfectMoney":"3","%Okpay":"3","%Capitalist":"5"],["Symbol":"BTC","$Wire":"0.5","$Cash Kharckov":"0"],["Symbol":"LivecoinBTC.USD","%Perfectmoney":"0.5","%Wire":"1.5","$Capitalist":"0"],["Symbol":"bitstampUSD","%Wire":"0.1"],["Symbol":"OkCoin.Intl","%Wire":"0.1"],["Symbol":"Exmo","$Wire":"20","$CryptoCapital":"0","$AdvCash":"0","%Perfect Money":"0.5","%Visa":"3"],["Symbol":"cexUSD","$Visa":"3.8","$Wire":"50","%CryptoCapital":"1"],["Symbol":"BX.Thailand","%CashBangkok":"0.1"]]
     
     let additionalFee = [["Symbol":"LivecoinBTC.USD","%Wire":"9","Type":"bid"],["Symbol":"Exmo","%Visa":"7.5","Type":"bid"],["Symbol":"cexUSD","$Visa":"0.25","Type":"ask"]]
     
@@ -49,10 +27,7 @@ class ViewController: NSViewController, NSURLConnectionDelegate {
     
     @IBOutlet weak var count1: NSTextField!
     @IBOutlet weak var summText: NSTextField!
-    
-    
-    
-    
+
     var countInt = 15
     
     lazy var data = NSMutableData()
@@ -149,10 +124,12 @@ class ViewController: NSViewController, NSURLConnectionDelegate {
                         let methodsBid = allFeeAndText(symbol: "\(we["Symbol"]!)", askOrNot: false, fromSumm: sellBTC)
                             for eachMethodBid in methodsBid {
                                 let inDollar = Int(eachMethodBid["SumResult"]!.doubleValue - balance)
-                                let inProcentDouble = (eachMethodBid["SumResult"]!.doubleValue - balance) * 100 / balance
-                                let inProcent = Double(round(100*inProcentDouble)/100)
-                                print(eachMethodAsk["Text"]!," -> ",boughtBTC,"BTC"," -> ",sellBTC,"$", "-> ",eachMethodBid["Text"]!)
-                                curLog.append(["Log":"\(me["Symbol"]!) \(eachMethodAsk["Text"]!) -> \(boughtBTC) BTC - > \(sellBTC) $ -> \(we["Symbol"]!) \(eachMethodBid["Text"]!)" as AnyObject,"Procent":inProcent as AnyObject,"Dollar":inDollar as AnyObject])
+                                if inDollar > 1 {
+                                 let inProcentDouble = (eachMethodBid["SumResult"]!.doubleValue - balance) * 100 / balance
+                                 let inProcent = Double(round(100*inProcentDouble)/100)
+                                 print(eachMethodAsk["Text"]!," -> ",boughtBTC,"BTC"," -> ",sellBTC,"$", "-> ",eachMethodBid["Text"]!)
+                                 curLog.append(["Log":"\(me["Symbol"]!) \(eachMethodAsk["Text"]!) -> \(boughtBTC) BTC - > \(sellBTC) $ -> \(we["Symbol"]!) \(eachMethodBid["Text"]!)" as AnyObject,"Procent":inProcent as AnyObject,"Dollar":inDollar as AnyObject])
+                                }
                             }
                         
                     }
