@@ -85,7 +85,7 @@ class ViewController: NSViewController, NSURLConnectionDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //_ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateData), userInfo: nil, repeats: true)
+        _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateData), userInfo: nil, repeats: true)
         
         
         self.tableView.delegate = self as? NSTableViewDelegate
@@ -247,7 +247,16 @@ class ViewController: NSViewController, NSURLConnectionDelegate {
             countInt = 20
             getDataFromBitcoincharts()
             self.scrapeNYCMetalScene()
-            calculatingData()
+            delayWithSeconds(3) {
+                self.calculatingData()
+            }
+            
+        }
+    }
+    
+    func delayWithSeconds(_ seconds: Double, completion: @escaping () -> ()) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            completion()
         }
     }
     
