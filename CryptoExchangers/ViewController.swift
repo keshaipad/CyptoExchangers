@@ -15,8 +15,8 @@ class ViewController: NSViewController, NSURLConnectionDelegate {
 
     let exchangers = ["GatehubBTC","QuadrigaCXBTC.USD","GeminiBTC","BTC.XBTC.USD","LivecoinBTC.USD","OkCoin.Intl","YoBitBTC.USD","Exmo","BX.Thailand"]
     
-    let askssFee = [["Symbol":"GatehubBTC","$Wire":"15"],["Symbol":"hitbtcUSD","%Swift":"1"],["Symbol":"coinsbankUSD","$Wire":"0","%Okpay":"0.5"],["Symbol":"coinbaseUSD","$Wire":"10"],["Symbol":"GeminiBTC","$Wire":"0"],["Symbol":"BTC.XBTC.USD","$Wire":"0","$CryptoCapital":"0"],["Symbol":"itbitUSD","$Swift":"40"],["Symbol":"btccUSD","$CryptoCapital":"0"],["Symbol":"krakenUSD","$Wire":"10"],["Symbol":"YoBitBTC.USD","$Capitalist":"0","$Okpay":"0","$PerfectMoney":"0"],["Symbol":"BTC-X","%Wire":"1","$Cash Kharckov":"0"],["Symbol":"LivecoinBTC.USD","%Perfectmoney":"1.5","$Wire":"50","%BTC-у USD":"2.5","$Capitalist":"0"],["Symbol":"bitstampUSD","$Wire":"10"],["Symbol":"OkCoin.Intl","%Wire":"0.1"],["Symbol":"Exmo","$Wire":"20","$Capitalist":"0","$CryptoCapital":"0","%AdvCash":"3","%Perfect Money":"3"],["Symbol":"cexUSD","$Wire":"0","$CryptoCapital":"0","%Visa":"3.5"],["Symbol":"BX.Thailand","$CashBangkok":"0"]]
-    let bidsFee = [["Symbol":"GatehubBTC","$Wire":"15"],["Symbol":"hitbtcUSD","$Wire":"0","$CryptoCapital":"0"],["Symbol":"BTC.XBTC.USD","$Swift":"35"],["Symbol":"coinsbankUSD","%Wire":"1","%Okpay":"1.5"],["Symbol":"coinbaseUSD","$Wire":"25"],["Symbol":"GeminiBTC","$Wire":"0"],["Symbol":"BTC.XBTC.USD","$Wire":"0","$CryptoCapital":"0"],["Symbol":"itbitUSD","$Swift":"40"],["Symbol":"btccUSD","%CryptoCapital":"0.2"],["Symbol":"krakenUSD","$Wire":"10"],["Symbol":"YoBitBTC.USD","%PerfectMoney":"3","%Okpay":"3","%Capitalist":"5"],["Symbol":"BTC","$Wire":"0.5","$Cash Kharckov":"0"],["Symbol":"LivecoinBTC.USD","%Perfectmoney":"0.5","%Wire":"1.5","$Capitalist":"0"],["Symbol":"bitstampUSD","%Wire":"0.1"],["Symbol":"OkCoin.Intl","%Wire":"0.1"],["Symbol":"Exmo","$Wire":"20","$CryptoCapital":"0","$AdvCash":"0","%Perfect Money":"0.5","%Visa":"3"],["Symbol":"cexUSD","$Visa":"3.8","$Wire":"50","%CryptoCapital":"1"],["Symbol":"BX.Thailand","%CashBangkok":"0.1"]]
+    let askssFee = [["Symbol":"GatehubBTC","$Wire":"15"],["Symbol":"hitbtcUSD","%Swift":"1"],["Symbol":"coinsbankUSD","$Wire":"0","%Okpay":"0.5"],["Symbol":"coinbaseUSD","$Wire":"10"],["Symbol":"GeminiBTC","$Wire":"0"],["Symbol":"BTC.XBTC.USD","$Wire":"0","$CryptoCapital":"0"],["Symbol":"itbitUSD","$Swift":"40"],["Symbol":"btccUSD","$CryptoCapital":"0"],["Symbol":"krakenUSD","$Wire":"10"],["Symbol":"YoBitBTC.USD","$Capitalist":"0","$Okpay":"0","$PerfectMoney":"0"],["Symbol":"BTC-X","%Wire":"1","$Cash Kharckov":"0"],["Symbol":"LivecoinBTC.USD","%Perfectmoney":"1.5","$Wire":"50","%BTC-у USD":"2.5","$Capitalist":"0"],["Symbol":"bitstampUSD","$Wire":"10"],["Symbol":"OkCoin.Intl","%Wire":"0.1"],["Symbol":"btceUSD","%Perfectmoney":"10","%MoneyPolo":"5","%ADVCash":"10","%Capitalist":"10","%Wire":"1"],["Symbol":"Exmo","$Wire":"20","$Capitalist":"0","$CryptoCapital":"0","%AdvCash":"3","%Perfect Money":"3"],["Symbol":"cexUSD","$Wire":"0","$CryptoCapital":"0","%Visa":"3.5"],["Symbol":"BX.Thailand","$CashBangkok":"0"]]
+    let bidsFee = [["Symbol":"GatehubBTC","$Wire":"15"],["Symbol":"hitbtcUSD","$Wire":"0","$CryptoCapital":"0"],["Symbol":"BTC.XBTC.USD","$Swift":"35"],["Symbol":"coinsbankUSD","%Wire":"1","%Okpay":"1.5"],["Symbol":"coinbaseUSD","$Wire":"25"],["Symbol":"GeminiBTC","$Wire":"0"],["Symbol":"BTC.XBTC.USD","$Wire":"0","$CryptoCapital":"0"],["Symbol":"itbitUSD","$Swift":"40"],["Symbol":"btccUSD","%CryptoCapital":"0.2"],["Symbol":"krakenUSD","$Wire":"10"],["Symbol":"YoBitBTC.USD","%PerfectMoney":"3","%Okpay":"3","%Capitalist":"5"],["Symbol":"BTC","$Wire":"0.5","$Cash Kharckov":"0"],["Symbol":"LivecoinBTC.USD","%Perfectmoney":"0.5","%Wire":"1.5","$Capitalist":"0"],["Symbol":"bitstampUSD","%Wire":"0.1"],["Symbol":"OkCoin.Intl","%Wire":"0.1"],["Symbol":"Exmo","$Wire":"20","$CryptoCapital":"0","$AdvCash":"0","%Perfect Money":"0.5","%Visa":"3"],["Symbol":"cexUSD","$Visa":"3.8","$Wire":"50","%CryptoCapital":"1"],["Symbol":"BX.Thailand","%CashBangkok":"0.1"],["Symbol":"btceUSD","%Perfectmoney":"0.5","%MoneyPolo":"0","%ADVCash":"0","%Capitalist":"0","%Wire":"1","%CASH":"1"],]
     
     let additionalFee = [["Symbol":"LivecoinBTC.USD","%Wire":"9","Type":"bid"],["Symbol":"Exmo","%Visa":"7.5","Type":"bid"],["Symbol":"cexUSD","$Visa":"0.25","Type":"ask"]]
     
@@ -28,7 +28,7 @@ class ViewController: NSViewController, NSURLConnectionDelegate {
     @IBOutlet weak var count1: NSTextField!
     @IBOutlet weak var summText: NSTextField!
 
-    var countInt = 15
+    var countInt = 60
     
     lazy var data = NSMutableData()
     var curDic = [["":1.1 as Double as AnyObject]] as [Dictionary<String,AnyObject>]
@@ -94,6 +94,7 @@ class ViewController: NSViewController, NSURLConnectionDelegate {
         self.resultsTableView.dataSource = self
         self.scrapeNYCMetalScene()
         getDataFromBitcoincharts()
+        delayWithSeconds(3) { self.calculatingData() }
         // Do any additional setup after loading the view.
     }
     
@@ -244,7 +245,7 @@ class ViewController: NSViewController, NSURLConnectionDelegate {
             countInt-=1
             count1.stringValue = "\(countInt)"
         } else {
-            countInt = 20
+            countInt = 60
             getDataFromBitcoincharts()
             self.scrapeNYCMetalScene()
             delayWithSeconds(3) {
